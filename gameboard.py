@@ -6,7 +6,7 @@ class GameBoard:
             [" * ", " * ", "   ", " * ", " * ", " * "],
             [
                 " * ",
-                "   ",
+                " o ",
                 "   ",
                 "   ",
                 " * ",
@@ -22,7 +22,7 @@ class GameBoard:
             ],
             [
                 " * ",
-                "   ",
+                " o ",
                 "   ",
                 "   ",
                 "   ",
@@ -47,7 +47,7 @@ class GameBoard:
              [
                 " * ",
                 "   ",
-                "   ",
+                " o ",
                 "   ",
                 "   ",
                 " * ",
@@ -64,11 +64,25 @@ class GameBoard:
                     print(self.board[i][j], end="")
             print("")
 
+    # def printCoins(self, coins):
+    #     print("coins: " + str(coins))        
+
     def checkMove(self, testRow, testColumn):
         if self.board[testRow][testColumn].find("*") != -1:
             print("Can't move there!")
             return False
         return True
+
+    # def checkCoins(self, playerRow, playerColumn):
+    #     if self.board[playerRow][playerColumn].find("o") != -1:
+    #         self.board[playerRow][playerColumn] = " "
+    #         return True
+    #     return False
+
+    # def checkTraps(self, playerRow, playerColumn):
+    #     if self.board[playerRow][playerColumn].find("DIE") != -1:
+    #         return True 
+    #     return False               
 
     # TODO
     # Return True if the player is in the winning column and row

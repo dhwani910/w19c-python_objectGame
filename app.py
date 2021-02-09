@@ -36,7 +36,11 @@ while True:
         if board.checkMove(player.rowPosition, player.columnPosition + 1):
             player.moveRight()
     else:
-        print("stay there")                        
+        print("stay there")       
+
+
+    # if board.checkCoins(player.rowPosition, player.columnPosition):
+    #     player.coins = player.coins + 1                     
 
 
 
@@ -44,3 +48,8 @@ while True:
     if board.checkWin(player.rowPosition, player.columnPosition):
         print("hurreyyyy!!!")
         break
+
+
+   
+     
+       
